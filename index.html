@@ -36,7 +36,7 @@
       };
     </script>
   </head>
-  <body class="bg-ligthBg font-poppins">
+  <body id="mainBody" class="bg-ligthBg font-poppins">
     <section class="container mx-auto p-5">
       <header>
         <nav class="flex justify-between items-center bg-white rounded-2xl p-6">
@@ -51,9 +51,9 @@
               class="flex justify-center items-center bg-ligthBg rounded-3xl p-3"
             >
               <img src="assets/checkbox.png" alt="" />
-              <h3 class="ml-2 font-bold text-3xl">23</h3>
+              <h3 id="totalTask" class="ml-2 font-bold text-3xl">23</h3>
             </div>
-            <div class="ml-8 p-3 bg-ligthBg rounded-full cursor-pointer">
+            <div id="randomTheme" class="ml-8 p-3 bg-ligthBg rounded-full cursor-pointer">
               <img  src="assets/theme-btn.png" alt="" />
             </div>
           </div>
@@ -63,6 +63,7 @@
         <section class="grid grid-cols-4 grid-rows-1  gap-6 pt-5">
 
           <section class="col-span-3 bg-white rounded-2xl h-full">
+
             <section
               class="grid grid-cols-4 gap-6 p-6 border-dashed border-b-2 border-indigo-100"
             >
@@ -74,7 +75,7 @@
                 </div>
                 <div>
                   <p class="font-medium text-sm">Task Assigned </p>
-                  <h1 class="font-bold text-3xl">05</h1>
+                  <h1 id="ongoingTask" class="font-bold text-3xl">05</h1>
                 </div>
               </div>
               <div
@@ -101,9 +102,10 @@
             </section>
 
             <section class="p-6 grid grid-cols-3 gap-5">
+
               <div class="bg-ligthBg rounded-2xl p-5 space-y-4">
                 <span class="bg-white rounded-lg py-2 px-3">ShopEase</span>
-                <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+                <h1 id="taskTitle1" class="font-medium text-xl">Fix Mobile Button Issue</h1>
 
                 <div class="bg-white rounded-lg p-4">
                   <p class="line-clamp-2">
@@ -118,7 +120,7 @@
                     <p>Deadline</p>
                     <h3>21 March 2025</h3>
                   </div>
-                  <button class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Completed</button>
+                  <button id="btnCompleted1" class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Completed</button>
                 </div>
               </div>
               <div class="bg-ligthBg rounded-2xl p-5 space-y-4">
@@ -218,6 +220,7 @@ and ensure onClick works properly
                   <button class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Completed</button>
                 </div>
               </div>
+
             </section>
           </section>
           <section class="col-span-1 h-10 bg-white rounded-2xl h-full">
