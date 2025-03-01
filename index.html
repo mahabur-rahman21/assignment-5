@@ -24,58 +24,224 @@
           extend: {
             colors: {
               clifford: "#da373d",
-              ligthb: "#F4F7FF",
+              ligthBg: "#F4F7FF",
               textColor: "#00303C",
               acentColor: "#3752FD",
             },
           },
           fontFamily: {
-            'poppins': ['Poppins', 'sans-serif'],
+            poppins: ["Poppins", "sans-serif"],
           },
         },
       };
     </script>
   </head>
-  <body class="bg-ligthb font-poppins">
-
-
+  <body class="bg-ligthBg font-poppins">
     <section class="container mx-auto p-5">
-
       <header>
-        <section class="flex justify-between items-center bg-white rounded-2xl p-6">
-            <div class="flex items-center "> 
-                <img src="assets/logo.png" alt="">
-                <h1 class="text-textColor text-4xl ml-3" >Dev<span class="font-bold text-textColor">Board</span></h1>
+        <nav class="flex justify-between items-center bg-white rounded-2xl p-6">
+          <div class="flex items-center">
+            <img src="assets/logo.png" alt="" />
+            <h1 class="text-textColor text-4xl ml-3">
+              Dev<span class="font-bold text-textColor">Board</span>
+            </h1>
+          </div>
+          <div class="flex items-center">
+            <div
+              class="flex justify-center items-center bg-ligthBg rounded-3xl p-3"
+            >
+              <img src="assets/checkbox.png" alt="" />
+              <h3 class="ml-2 font-bold text-3xl">23</h3>
             </div>
-            <div class="flex items-center">
-                <div class="flex justify-center items-center bg-ligthb rounded-3xl p-3">
-                    <img src="assets/checkbox.png" alt="">
-                    <h3 class="ml-2 font-bold text-3xl">23</h3>
-                </div>
-                <div class="ml-8 p-3 bg-ligthb rounded-full">
-                    <img src="assets/theme-btn.png" alt="">
-                </div>
+            <div class="ml-8 p-3 bg-ligthBg rounded-full cursor-pointer">
+              <img  src="assets/theme-btn.png" alt="" />
             </div>
-
-        </section>
-        
+          </div>
+        </nav>
       </header>
       <main>
+        <section class="grid grid-cols-4 grid-rows-1  gap-6 pt-5">
 
-        <section class="grid grid-cols-4 gap-6 pt-5 ">
-
-            <section class="col-span-3 h-10 bg-white rounded-2xl ">
-
+          <section class="col-span-3 bg-white rounded-2xl h-full">
+            <section
+              class="grid grid-cols-4 gap-6 p-6 border-dashed border-b-2 border-indigo-100"
+            >
+              <div
+                class="bg-ligthBg rounded-xl p-3 flex items-center justify-center space-x-3"
+              >
+                <div class="bg-white p-3 rounded-full">
+                  <img src="assets/checkbox.png" alt="" />
+                </div>
+                <div>
+                  <p class="font-medium text-sm">Task Assigned </p>
+                  <h1 class="font-bold text-3xl">05</h1>
+                </div>
+              </div>
+              <div
+              
+              id="btnDiscover"
+                class="bg-gradient-to-r from-acentColor to-[#9BA8F8] rounded-xl p-3 flex items-center justify-center space-x-2 col-span-2 cursor-pointer"
+              >
+                <img src="assets/board.png" alt="" />
+                <h3 class="text-white text-2xl font-medium">
+                  Discover Something <br />New Today!
+                </h3>
+              </div>
+              <div
+                class="bg-ligthBg rounded-xl p-3 flex items-center justify-center space-x-3"
+              >
+                <div>
+                  <img src="assets/calender.png" alt="" />
+                </div>
+                <div>
+                  <p>Wed ,</p>
+                  <h1>Jul 28 2025</h1>
+                </div>
+              </div>
             </section>
-            <section class="col-span-1 h-10 bg-white rounded-2xl ">
 
+            <section class="p-6 grid grid-cols-3 gap-5">
+              <div class="bg-ligthBg rounded-2xl p-5 space-y-4">
+                <span class="bg-white rounded-lg py-2 px-3">ShopEase</span>
+                <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+
+                <div class="bg-white rounded-lg p-4">
+                  <p class="line-clamp-2">
+                    Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly and ensure onClick works
+                    properly
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t-2 border-dashed border-blue-100">
+                  <div>
+                    <p>Deadline</p>
+                    <h3>21 March 2025</h3>
+                  </div>
+                  <button class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Completed</button>
+                </div>
+              </div>
+              <div class="bg-ligthBg rounded-2xl p-5 space-y-4">
+                <span class="bg-white rounded-lg py-2 px-3">CloudSync</span>
+                <h1 class="font-medium text-xl">Add Dark Mode</h1>
+
+                <div class="bg-white rounded-lg p-4">
+                  <p class="line-clamp-2">
+                    Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t-2 border-dashed border-blue-100">
+                  <div>
+                    <p>Deadline</p>
+                    <h3>21 March 2025</h3>
+                  </div>
+                  <button class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Completed</button>
+                </div>
+              </div>
+              <div class="bg-ligthBg rounded-2xl p-5 space-y-4">
+                <span class="bg-white rounded-lg py-2 px-3">SwiftPay</span>
+                <h1 class="font-medium text-xl">Optimize  Home page </h1>
+
+                <div class="bg-white rounded-lg p-4">
+                  <p class="line-clamp-2">
+                    Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+and ensure onClick works properly
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t-2 border-dashed border-blue-100">
+                  <div>
+                    <p>Deadline</p>
+                    <h3>21 March 2025</h3>
+                  </div>
+                  <button class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Completed</button>
+                </div>
+              </div>
+              <div class="bg-ligthBg rounded-2xl p-5 space-y-4">
+                <span class="bg-white rounded-lg py-2 px-3">Meta</span>
+                <h1 class="font-medium text-xl">Add new emoji 🤲</h1>
+
+                <div class="bg-white rounded-lg p-4">
+                  <p class="line-clamp-2">
+                    Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly and ensure onClick works
+                    properly
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t-2 border-dashed border-blue-100">
+                  <div>
+                    <p>Deadline</p>
+                    <h3>21 March 2025</h3>
+                  </div>
+                  <button class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Completed</button>
+                </div>
+              </div>
+              <div class="bg-ligthBg rounded-2xl p-5 space-y-4">
+                <span class="bg-white rounded-lg py-2 px-3">Google LLC</span>
+                <h1 class="font-medium text-xl">Integrate OpenAI API </h1>
+
+                <div class="bg-white rounded-lg p-4">
+                  <p class="line-clamp-2">
+                    Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly and ensure onClick works
+                    properly
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t-2 border-dashed border-blue-100">
+                  <div>
+                    <p>Deadline</p>
+                    <h3>21 March 2025</h3>
+                  </div>
+                  <button class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Completed</button>
+                </div>
+              </div>
+              <div class="bg-ligthBg rounded-2xl p-5 space-y-4">
+                <span class="bg-white rounded-lg py-2 px-3">Glassdoar</span>
+                <h1 class="font-medium text-xl">Improve Job searching </h1>
+
+                <div class="bg-white rounded-lg p-4">
+                  <p class="line-clamp-2">
+                    Debug using Chrome DevTools, check for overlapping elements,
+                    and ensure onClick works properly and ensure onClick works
+                    properly
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between pt-3 border-t-2 border-dashed border-blue-100">
+                  <div>
+                    <p>Deadline</p>
+                    <h3>21 March 2025</h3>
+                  </div>
+                  <button class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Completed</button>
+                </div>
+              </div>
             </section>
+          </section>
+          <section class="col-span-1 h-10 bg-white rounded-2xl h-full">
 
+            <div class="flex flex-col p-6 space-y-3 border-b-2 border-dashed border-blue-100">
+              <div class="flex items-center justify-center space-x-2">
+                <img src="assets/activity.png" alt="">
+                <h1 class="text-xl font-medium">Activity Log</h1>
+              </div>
 
+              <div class="flex justify-center items-center">
+              <button class="btn bg-acentColor text-white hover:bg-acentColor hover:text-white">Clear History</button>
+            </div>
+            </div>
+            <div class="p-3 space-y-3">
+              <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+              <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+              <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+            </div>
+          </section>
         </section>
-
       </main>
-
     </section>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
