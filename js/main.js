@@ -11,6 +11,8 @@ let btnCompleted4 = document.getElementById("btnCompleted4");
 let btnCompleted5 = document.getElementById("btnCompleted5");
 let btnCompleted6 = document.getElementById("btnCompleted6");
 
+setDates();
+
 btnCompleted1.addEventListener("click", function (e) {
   let taskTitle1 = getInnerText("taskTitle1");
   let totalTask = parseInt(getInnerText("totalTask"));
@@ -22,7 +24,7 @@ btnCompleted1.addEventListener("click", function (e) {
 
   let div = document.createElement("div");
   div.innerHTML = `
-     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle1} at 12:48:15 PM</p>
+     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle1} at ${getTimeNow()}</p>
     `;
   activityContainer.appendChild(div);
 
@@ -39,7 +41,7 @@ btnCompleted2.addEventListener("click", function (e) {
 
   let div = document.createElement("div");
   div.innerHTML = `
-     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle2} at 12:48:15 PM</p>
+     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle2} at ${getTimeNow()}</p>
     `;
   activityContainer.appendChild(div);
 
@@ -56,7 +58,7 @@ btnCompleted3.addEventListener("click", function (e) {
 
   let div = document.createElement("div");
   div.innerHTML = `
-     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle3} at 12:48:15 PM</p>
+     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle3} at ${getTimeNow()}</p>
     `;
   activityContainer.appendChild(div);
 
@@ -73,7 +75,7 @@ btnCompleted4.addEventListener("click", function (e) {
 
   let div = document.createElement("div");
   div.innerHTML = `
-     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle4} at 12:48:15 PM</p>
+     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle4} at ${getTimeNow()}</p>
     `;
   activityContainer.appendChild(div);
 
@@ -90,7 +92,7 @@ btnCompleted5.addEventListener("click", function (e) {
 
   let div = document.createElement("div");
   div.innerHTML = `
-     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle5} at 12:48:15 PM</p>
+     <p class="p-3 bg-ligthBg rounded-lg">You have Complete The Task ${taskTitle5} at ${getTimeNow()}</p>
     `;
   activityContainer.appendChild(div);
 
@@ -143,17 +145,67 @@ function setInnerText(id, text) {
 }
 
 function getTimeNow() {
-  const now = new Date();
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const seconds = now.getSeconds();
-  let ampm=""
-  if(hours>=12){
-     ampm = "PM"
-  }else{
-     ampm = "AM"
+  let now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  let ampm = "";
+
+  if (hours >= 12) {
+    ampm = "PM";
+    hours = hours - 12;
+  } else {
+    ampm = "AM";
   }
-  
+
+  if (hours < 10) {
+    hours = "0" + hours;
+  } else if (minutes < 10) {
+    minutes = "0" + minutes;
+  } else if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
 
   return `${hours}:${minutes}:${seconds}:${ampm}`;
+}
+
+function setDates() {
+  let weeks = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  let date = new Date();
+  let weekday = weeks[date.getDay()];
+  let day = date.getDate();
+  let month = months[date.getMonth()]
+  let year = date.getFullYear();
+
+  let weekDay = document.getElementById("weekDay");
+  let fullDate = document.getElementById("fullDate");
+
+  weekDay.innerText = weekday;
+  fullDate.innerText = day + " " + month + " " + year;
+
+  // return `${weekday},${day},${month},${year}`;
 }
